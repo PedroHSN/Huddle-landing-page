@@ -1,3 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:hsl(257, 40%, 49%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container{ 
+    width: 1200px;
+    max-width:100%;
+    margin: auto;
+}
+
+.conteudo{
+   display: flex;
+   margin: 50px 0;
+    
+}
+
+.conteudo > div{
+    margin: 25px;
+    flex: 1;
+}
+
+.conteudo > div:first-child {
+    margin-right: 20px;
+}
+
+.conteudo > div:last-child {
+    margin-left: 20px;
+}
+
+.btn {
+    background-color: #fff;
+    color: hsl(257, 40%, 49%);
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0, 3);
+    padding: 20px 80px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.texto h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.texto p {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.social {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+.social a {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -5,4 +97,33 @@
 
   .attribution a {
     color: hsl(228, 45%, 44%);
+  }
+
+  @media screen and (max-width: 768px){
+    .conteudo {
+        flex-direction: column;
+        margin: 50px 0;
+    }
+    
+    .conteudo > div:first-child {
+        flex: 1;
+        margin-right: 0;
+    }
+    
+    .conteudo > div:last-child {
+        flex:1;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    p {
+        margin: auto;
+    }
+    
+    .social {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+
   }
